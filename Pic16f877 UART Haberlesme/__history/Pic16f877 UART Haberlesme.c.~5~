@@ -1,0 +1,40 @@
+#include<16f877.h>
+
+#fuses XT,NOWDT,NOPROTECT,NOBROWNOUT,NOLVP,NOPUT,NOWRT,NODEBUG,NOCPD
+
+#use delay(clock = 4000000)
+
+#use fast_io(a)
+#use fast_io(b)
+
+#define use_portb_lcd TRUE
+#include<lcd.c>
+
+#use rs232(baud=9600, xmit=pin_c6, rcv=pin_c7, parity=N, stop=1) //Haberleþme ayarlarýný yapýyoruz.
+
+char alinan[10],verilen[10]; //Alýnan ve ver adýnda string dizi tanýmlýyoruz.
+int verilecek;
+
+void main(){
+setup_psp(PSP_DISABLED);
+setup_timer_1(T1_DISABLED);
+setup_timer_2(T2_DISABLED,0,1);
+setup_adc_ports(NO_ANALOGS);
+setup_adc(ADC_OFF);
+setup_ccp1(CCP_OFF);
+setup_ccp2(CCP_OFF);
+
+lcd_init();
+
+while(true){
+verilecek=input_a(); // A portundan gelen veri, verilecek adlý deðiþkene atanýyor.
+sprintf(ver,"%d",verilecek); // int tipindeki deðiþkenin deðeri string tipindeki deðiþkene string olarak atanýyor.Sebebi haberleþmede string ve char veri tipinde iþlem yapýlmasýdýr.
+gets(alinan); // Karþýdan gelen veri okunarak alinan adlý deðiþkene atanýyor. (gets komutuyla)
+printf(lcd_putc,"\fAlinan Deger %s",alinan); //char veri tipinde olduðu için %s dedik.
+delay_ms(1000);
+puts(ver); //ver adlý diziyi puts komutu ile karþý gönderiyor.
+}
+
+}
+
+

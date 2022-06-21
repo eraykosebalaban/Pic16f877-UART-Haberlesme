@@ -1,0 +1,50 @@
+[PROJECT]
+Target=Pic16f877 UART Haberlesme.hex
+Processor_Text=PIC16F877
+CCSVersion=5.049
+Compiler=PCM
+[Target Data]
+FileList=Pic16f877 UART Haberlesme.c
+[Pic16f877 UART Haberlesme.c]
+Type=4
+[mru-list]
+1=Pic16f877 UART Haberlesme.c
+
+[defines]
+buildcount=6
+
+[ProjectLog]
+Days=2
+D1=11-06-2022
+D1_L=10
+D1_L1=[66425]Project Closed.
+D1_L2=[67407]Project Opened.
+D1_L3=[67416]Project Closed.
+D1_L4=[67482]Project Opened.
+D1_L5=[67487]Started Editing.
+D1_L6=[67522]Stopped Editing.
+TotalEdit=1
+TotalDebug=0
+D1_E=1
+D1_D=0
+D1_L7=[67522]Project Closed.
+D1_L8=[67596]Project Opened.
+D1_L9=[67606]Project Closed.
+D1_L10=[86180]Project Opened.
+D2=12-06-2022
+D2_L=5
+D2_L1=[322]Started Editing.
+D2_L2=[780]Project Closed.
+D2_L3=[1895]Project Opened.
+D2_L4=[5740]Project Opened.
+D2_L5=[5782]Project Closed.
+
+[Opened Files]
+1=Pic16f877 UART Haberlesme 2.c
+t1=9
+2=Pic16f877 UART Haberlesme.c
+t2=9
+Count=2
+[Units]
+Count=1
+1=Pic16f877 UART Haberlesme (main)
